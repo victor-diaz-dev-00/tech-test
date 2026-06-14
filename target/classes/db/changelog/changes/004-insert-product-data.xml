@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.23.xsd">
+
+    <changeSet id="003-insert-product-data" author="codex">
+        <insert tableName="products">
+            <column name="id" valueNumeric="35455"/>
+            <column name="name" value="Product 1"/>
+        </insert>
+        <insert tableName="products">
+            <column name="id" valueNumeric="354"/>
+            <column name="name" value="Product 2"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

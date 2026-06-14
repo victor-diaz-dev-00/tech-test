@@ -1,0 +1,11 @@
+com\gft\techtest\prices\infrastructure\in\rest\dto\ErrorResponseTest.class
+com\gft\techtest\prices\infrastructure\in\rest\mapper\PriceMapperTest.class
+com\gft\techtest\prices\infrastructure\configuration\WebConfigurationTest.class
+com\gft\techtest\prices\infrastructure\in\rest\controller\exception\GlobalExceptionHandlerTest.class
+com\gft\techtest\prices\infrastructure\out\persistence\adapter\BrandQueryAdapterTest.class
+com\gft\techtest\GftTechTestApplicationTest.class
+com\gft\techtest\prices\infrastructure\out\persistence\adapter\PriceQueryAdapterTest.class
+com\gft\techtest\prices\domain\exception\DomainExceptionTest.class
+com\gft\techtest\prices\infrastructure\in\rest\controller\PriceApiE2ETest.class
+com\gft\techtest\prices\infrastructure\in\rest\controller\PriceControllerTest.class
+com\gft\techtest\prices\application\usecases\ApplicablePricePortUseCasesTest.class
