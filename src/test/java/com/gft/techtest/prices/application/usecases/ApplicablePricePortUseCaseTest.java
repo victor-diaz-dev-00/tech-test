@@ -20,14 +20,14 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-class ApplicablePricePortUseCasesTest {
+class ApplicablePricePortUseCaseTest {
 
     @Test
     void shouldReturnPriceWithBrandNameWhenBrandExists() {
         ProductQueryPort productQueryPort = mock(ProductQueryPort.class);
         BrandQueryPort brandQueryPort = mock(BrandQueryPort.class);
         PriceQueryPort priceQueryPort = mock(PriceQueryPort.class);
-        ApplicablePricePortUseCases useCases = new ApplicablePricePortUseCases(productQueryPort, brandQueryPort, priceQueryPort);
+        ApplicablePricePortUseCase useCases = new ApplicablePricePortUseCase(productQueryPort, brandQueryPort, priceQueryPort);
         OffsetDateTime applicationDate = OffsetDateTime.parse("2020-06-14T10:00:00Z");
         Price price = new Price(1L, 35455L, 1, applicationDate, applicationDate, 1, BigDecimal.valueOf(35.50), "EUR");
 
@@ -47,7 +47,7 @@ class ApplicablePricePortUseCasesTest {
         ProductQueryPort productQueryPort = mock(ProductQueryPort.class);
         BrandQueryPort brandQueryPort = mock(BrandQueryPort.class);
         PriceQueryPort priceQueryPort = mock(PriceQueryPort.class);
-        ApplicablePricePortUseCases useCases = new ApplicablePricePortUseCases(productQueryPort, brandQueryPort, priceQueryPort);
+        ApplicablePricePortUseCase useCases = new ApplicablePricePortUseCase(productQueryPort, brandQueryPort, priceQueryPort);
         OffsetDateTime applicationDate = OffsetDateTime.parse("2020-06-14T10:00:00Z");
 
         when(productQueryPort.findNameById(35455L)).thenReturn(Optional.of("PRODUCT"));
@@ -63,7 +63,7 @@ class ApplicablePricePortUseCasesTest {
         ProductQueryPort productQueryPort = mock(ProductQueryPort.class);
         BrandQueryPort brandQueryPort = mock(BrandQueryPort.class);
         PriceQueryPort priceQueryPort = mock(PriceQueryPort.class);
-        ApplicablePricePortUseCases useCases = new ApplicablePricePortUseCases(productQueryPort, brandQueryPort, priceQueryPort);
+        ApplicablePricePortUseCase useCases = new ApplicablePricePortUseCase(productQueryPort, brandQueryPort, priceQueryPort);
         when(productQueryPort.findNameById(35455L)).thenReturn(Optional.of("PRODUCT"));
         when(brandQueryPort.findNameById(2L)).thenReturn(Optional.empty());
 
@@ -77,7 +77,7 @@ class ApplicablePricePortUseCasesTest {
         ProductQueryPort productQueryPort = mock(ProductQueryPort.class);
         BrandQueryPort brandQueryPort = mock(BrandQueryPort.class);
         PriceQueryPort priceQueryPort = mock(PriceQueryPort.class);
-        ApplicablePricePortUseCases useCases = new ApplicablePricePortUseCases(productQueryPort, brandQueryPort, priceQueryPort);
+        ApplicablePricePortUseCase useCases = new ApplicablePricePortUseCase(productQueryPort, brandQueryPort, priceQueryPort);
         OffsetDateTime applicationDate = OffsetDateTime.parse("2020-06-14T10:00:00Z");
         Price first = domainPrice(2, BigDecimal.valueOf(45.50));
         Price second = domainPrice(2, BigDecimal.valueOf(35.50));
@@ -94,7 +94,7 @@ class ApplicablePricePortUseCasesTest {
         ProductQueryPort productQueryPort = mock(ProductQueryPort.class);
         BrandQueryPort brandQueryPort = mock(BrandQueryPort.class);
         PriceQueryPort priceQueryPort = mock(PriceQueryPort.class);
-        ApplicablePricePortUseCases useCases = new ApplicablePricePortUseCases(productQueryPort, brandQueryPort, priceQueryPort);
+        ApplicablePricePortUseCase useCases = new ApplicablePricePortUseCase(productQueryPort, brandQueryPort, priceQueryPort);
         OffsetDateTime applicationDate = OffsetDateTime.parse("2020-06-14T10:00:00Z");
         Price first = domainPrice(1, BigDecimal.valueOf(45.50));
         Price second = domainPrice(2, BigDecimal.valueOf(35.50));

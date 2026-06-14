@@ -17,12 +17,12 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ApplicablePricePortUseCases implements ApplicablePricePort {
+public class ApplicablePricePortUseCase implements ApplicablePricePort {
     private final ProductQueryPort productQueryPort;
     private final BrandQueryPort brandQueryPort;
     private final PriceQueryPort priceQueryPort;
 
-    public ApplicablePricePortUseCases(ProductQueryPort productQueryPort, BrandQueryPort brandQueryPort, PriceQueryPort priceQueryPort) {
+    public ApplicablePricePortUseCase(ProductQueryPort productQueryPort, BrandQueryPort brandQueryPort, PriceQueryPort priceQueryPort) {
         this.productQueryPort = productQueryPort;
         this.brandQueryPort = brandQueryPort;
         this.priceQueryPort = priceQueryPort;
